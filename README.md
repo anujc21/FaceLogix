@@ -1,6 +1,6 @@
 # FaceLogix
 
-## A face recognition based attendance system made using React, Firebase and FaceAPI.
+## A facial recognition-based attendance system with new student creation, attendance logging using facial patterns, and attendance export options.
 
 ### Live @ https://facelogix.pages.dev/
 
