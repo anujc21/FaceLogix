@@ -1,0 +1,1018 @@
+*{
+    user-select: none;
+    -webkit-user-select: none;
+    font-family: Nunito;
+}
+h3{
+    font-size: 20px;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+.loaderContainer{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    z-index: 97;
+}
+.loaderBall1{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    background: #ff96ce;
+    border-radius: 50%;
+    opacity: 0.8;
+    transform: translate(-50%, -50%);
+}
+.loaderBall2{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    width: 100px;
+    height: 100px;
+    background: #ff66b7;
+    border-radius: 50%;
+    opacity: 0.5;
+    transform: translate(-50%, -50%);
+}
+.appBar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 70px;
+    max-height: 90px;
+    padding: 0px 20px;
+    color: #fff;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    background: #f542a1;
+    display: flex;
+    align-items: center;
+    z-index: 99;
+}
+.appBarIcon{
+    margin: 0px 3px 3px 0px;
+    font-size: 32px;
+    font-variation-settings:
+        "FILL" 1,
+        "wght" 400,
+        "GRAD" 0,
+        "opsz" 24
+    ;
+}
+.logoutButton{
+    margin: 0px 35px 0px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logoutButton:active{
+    opacity: 0.5;
+}
+.logoutIcon{
+    font-size: 32px;
+    font-variation-settings:
+        "FILL" 1,
+        "wght" 400,
+        "GRAD" 0,
+        "opsz" 24
+    ;
+}
+.footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    min-height: 40px;
+    padding: 0px 20px;
+    color: #fff;
+    box-shadow: 0 8px 32px 4px rgba(0, 0, 0, 0.3);
+    background: #fa39c7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 99;
+}
+.notificationBox{
+    position: fixed;
+    left: 50%;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    max-width: 80%;
+    height: auto;
+    margin: 100px 0px;
+    padding: 5px 0px;
+    text-align: center;
+    border-radius: 10px;
+    background: #fa39c7;
+    z-index: 98;
+    transform: translate(-50%, 0);
+}
+.notificationText{
+    margin: 5px;
+    color: #fff;
+}
+.welcomeMessage{
+    margin: 130px auto 0px auto;
+    padding: 5px 30px;
+    color: #000;
+    width: 600px;
+    max-width: 70%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+.welcomeMessageIcon{
+    margin: 0px 5px 1px 0px;
+    font-size: 32px;
+    font-variation-settings:
+        "FILL" 1,
+        "wght" 400,
+        "GRAD" 0,
+        "opsz" 24
+    ;
+}
+.classContainer{
+    margin: 40px auto;
+    padding: 80px 30px;
+    color: #000;
+    width: 300px;
+    height: 200px;
+    max-width: 50%;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.classButton{
+    width: 120px;
+    color: #fff;
+    margin: 5px;
+    padding: 10px;
+    border: 5px solid #fa39c7;
+    border-radius: 10px;
+    background: #ff66d6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.3);
+}
+.classButton:active{
+    filter: brightness(1.2);
+}
+.classes, .students{
+    margin: 130px auto 80px auto;
+    padding: 50px 30px 100px 30px;
+    max-width: 800px;
+    width: 70%;
+    height: 350px;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.classHeader{
+    margin: 10px 0px 10px 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+}
+.backButton{
+    margin-left: auto;
+    padding: 10px;
+    border-radius: 10px;
+    background: #ff66d6;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.3);
+}
+.backButton:active{
+    filter: brightness(1.2);
+}
+.classBox{
+    align-self: center;
+    width: 90%;
+    min-height: 90%;
+    height: 90%;
+    padding: 20px 0px;
+    border-radius: 10px;
+    background: #fcfcfc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0 2px 8px 0 rgba(0, 0, 0, 0.3);
+}
+.classOverflow{
+    width: 95%;
+    height: 95%;
+    padding: 20px 0px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow-y: auto;
+}
+.classSelf, .classAddButton, .startAttendanceButton{
+    margin: 20px;
+    padding: 10px;
+    width: 100px;
+    height: 100px;
+    border: 5px solid #ff96ce;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.3);
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ff96ce;
+    word-break: break-word;
+}
+.classSelf:active{
+    opacity: 0.5;
+}
+.classAddButton{
+    color: #fff;
+    font-weight: bold;
+    flex-direction: column;
+    border: 5px solid #fa39c7;
+    border-radius: 10px;
+    background: #ff66d6;
+}
+.classAddButton:active{
+    filter: brightness(1.2);
+}
+.studentSelf{
+    margin: 20px;
+    padding: 10px;
+    width: 140px;
+    height: 140px;
+    border: 5px solid #ff96ce;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.3);
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    word-break: break-word;
+}
+.studentIcon, .attendanceIcon{
+    font-size: 38px;
+    font-variation-settings:
+        "FILL" 1,
+        "wght" 800,
+        "GRAD" 0,
+        "opsz" 24
+    ;
+    color: #f542a1;
+}
+.studentName{
+    color: #ff96ce;
+    font-size: 15px;
+    margin: 5px;
+    font-weight: 800;
+}
+.studentRoll{
+    font-size: 12px;
+    margin: 0px 5px;
+    font-weight: 800;
+    color: #aaa;
+}
+.startAttendanceButton{
+    width: 140px;
+    height: 140px;
+    color: #fff;
+    font-weight: bold;
+    flex-direction: column;
+    border: 5px solid #fa39c7;
+    border-radius: 10px;
+    background: #ff66d6; 
+}
+.startAttendanceButton:active{
+    filter: brightness(1.2);
+}
+.attendanceIcon{
+    color: #fff;
+}
+.classAdderBackground{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.classAdderContainer{
+    width: 300px;
+    max-width: 70%;
+    height: auto;
+    padding: 30px 20px;
+    border: 5px solid #fa39c7;
+    border-radius: 10px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.3);
+}
+.classAdderName{
+    margin: 10px;
+}
+.classAdderInput{
+    margin: 0px 0px 25px 0px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #888;
+    width: 150px;
+    outline: none;
+    padding: 5px;
+    text-align: center;
+    border: 5px solid #ff96ce;
+    border-radius: 10px;
+}
+.classAdderInput:focus{
+    outline: 4px solid #fa39c7;
+}
+.classAdderButtons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+.classAdderCloseButton{
+    width: 60px;
+    height: 15px;
+    color: #fff;
+    margin: 5px;
+    padding: 10px;
+    border: 5px solid #f542a1;
+    border-radius: 10px;
+    background: #ff57b0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    font-size: 12px;
+    font-weight: bold;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.3); 
+}
+.classAdderCloseButton:active{
+    filter: brightness(1.2);
+}
+.classAdderAddButton{
+    width: 60px;
+    height: 15px;
+    color: #fff;
+    margin: 5px;
+    padding: 10px;
+    border: 5px solid #fa39c7;
+    border-radius: 10px;
+    background: #ff66d6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    font-size: 12px;
+    font-weight: bold;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.3); 
+}
+.classAdderAddButton:active{
+    filter: brightness(1.2);
+}
+.classAdderIcon{
+    font-size: 20px;
+}
+.studentAdderContainer{
+    margin: 130px auto 70px auto;
+    padding: 5px 20px 20px 20px;
+    max-width: 400px;
+    width: 80%;
+    height: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.studentAdderHeader{
+    margin: 10px 0px 35px 0px;
+}
+.studentAdderName, .studentAdderRoll, .studentAdderPictures{
+    margin: 0px 0px 10px 0px;
+    color: #fa39c7;
+}
+.studentAdderNameInput, .studentAdderRollInput{
+    width: 200px;
+    max-width: 80%;
+    margin: 0px 0px 30px 0px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #888;
+    outline: none;
+    padding: 5px;
+    text-align: center;
+    border: 5px solid #ff96ce;
+    border-radius: 10px;
+}
+.studentAdderNameInput:focus, .studentAdderRollInput:focus{
+    outline: 4px solid #fa39c7;
+}
+.studentAdderPicturesImageButton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 2px;
+    margin: 0px 0px 10px 0px;
+    padding: 10px;
+    border: 5px solid #ff66d6;
+    border-radius: 5px;
+    background: #fa39c7;
+    color: #fff;
+    font-weight: bold;
+}
+.studentAdderPicturesImageButton:active{
+    filter: brightness(1.2);
+}
+.studentAdderPicturesImageInput{
+    display: none;
+}
+.studentAdderImageIcon{
+    margin: 0px 0px 2px 0px;
+}
+.studentAdderButtons{
+    width: 80px;
+    font-size: 14px;
+}
+.studentAdderPicturesImagePreview{
+    margin: 0px 0px 20px 0px;
+    color: #aaa;
+}
+.attendanceRoomContainer{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+.cameraContainer{
+    margin: 130px 20px 80px 20px;
+    padding: 35px 0px 15px 0px;
+    max-width: 90%;
+    width: 800px;
+    height: 450px;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.studentList{
+    margin: 130px 20px 80px 20px;
+    padding: 75px 30px 100px 30px;
+    max-width: 90%;
+    width: 300px;
+    height: 325px;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.cameraFeedBox{
+    width: 90%;
+    height: 380px;
+    margin: 0px 0px 15px 0px;
+    border: 7px solid #ff66d6;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+}
+.cameraFeed{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scaleX(-1);
+}
+.cameraButton{
+    font-size: 16px;
+    margin: 0px;
+    height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+.cameraScanButtons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+.cameraScanIcon{
+    margin: 0px 5px 0px 0px;
+    font-size: 20px;
+    font-variation-settings:
+        "FILL" 1,
+        "wght" 400,
+        "GRAD" 0,
+        "opsz" 24
+    ;
+}
+.cameraBrightnessButton{
+    width: 20px;
+    height: 20px;
+    color: #fff;
+    margin: 0px 5px;
+    border: 5px solid #f542a1;
+    border-radius: 5px;
+    background: #ff57b0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.3);
+}
+.cameraBrightnessButton:active{
+    filter: brightness(1.2);
+}
+.cameraBrightnessButtonIcon{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 800px){
+    .attendanceRoomContainer{
+        align-items: center;
+        flex-direction: column;
+    }
+    .cameraContainer{
+        margin: 130px 20px 30px 20px;
+    }
+    .studentList{
+        margin: 0px 20px 80px 20px;
+    }
+}
+.studentPresent{
+    margin: 20px;
+    padding: 10px;
+    width: 150px;
+    height: 150px;
+    border: 5px solid #ff96ce;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.3);
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    word-break: break-word;
+}
+.studentAbsent{
+    margin: 20px;
+    padding: 10px;
+    width: 150px;
+    height: 150px;
+    border: 5px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.3);
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    word-break: break-word;
+    color: #ccc;
+}
+.studentNamePresent{
+    color: #ff96ce;
+    font-size: 15px;
+    margin: 5px;
+    font-weight: 800;
+}
+.studentRollPresent{
+    font-size: 12px;
+    margin: 0px 5px;
+    font-weight: 800;
+    color: #aaa;
+}
+.studentStatusPresent{
+    margin: 10px 0px 0px 0px;
+    color: #ff96ce;
+    font-size: 16px;
+}
+.studentNameAbsent{
+    color: #ccc;
+    font-size: 15px;
+    margin: 5px;
+    font-weight: 800;
+}
+.studentRollAbsent{
+    font-size: 12px;
+    margin: 0px 5px;
+    font-weight: 800;
+    color: #ccc;
+}
+.studentStatusAbsent{
+    margin: 10px 0px 0px 0px;
+    color: #ccc;
+    font-size: 16px;
+}
+.studentIconAbsent{
+    font-size: 38px;
+    font-variation-settings:
+        "FILL" 1,
+        "wght" 800,
+        "GRAD" 0,
+        "opsz" 24
+    ;
+    color: #ccc;
+}
+.attendanceBox{
+    align-self: center;
+    width: 90%;
+    min-height: 85%;
+    height: 85%;
+    padding: 20px 0px;
+    border-radius: 10px;
+    background: #fcfcfc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0 2px 8px 0 rgba(0, 0, 0, 0.3);
+}
+.attendanceBoxFinishContainer{
+    align-self: center;
+    margin: 15px 0px 0px 0px;
+}
+.finishScanIcon{
+    margin: 0px 0px 0px 0px;
+    font-size: 30px;
+    font-variation-settings:
+        "FILL" 1,
+        "wght" 400,
+        "GRAD" 0,
+        "opsz" 24
+    ;
+}
+.attendanceDownloaderContainer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.attendanceDownloader{
+    margin: 0px auto 0px auto;
+    padding: 50px 30px 60px 30px;
+    max-width: 400px;
+    width: 70%;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.attendanceDownloaderHeader{
+    margin: 10px 0px 0px 0px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+.attendanceDownloadTitle{
+    text-align: center;
+}
+.attendanceDownloaderButtonContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.attendanceDownloaderButton{
+    width: 200px;
+    margin: 0px 0px 20px 0px;
+}
+.photoClicker{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.photoClickerCameraContainer{
+    margin: 0px 20px 60px 20px;
+    padding: 35px 25px 15px 25px;
+    max-width: 300px;
+    width: 70%;
+    height: 450px;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.photoClickerCameraFeedBox{
+    width: 90%;
+    height: 380px;
+    margin: 0px 0px 15px 0px;
+    border: 7px solid #ff66d6;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+}
+.scanHelper{
+    font-size: 16px;
+    font-weight: bold;
+}
+.scanTitle{
+    color: #f542a1;
+}
+.scanText{
+    color: #ff57b0;
+}
+.finishAttendanceButton{
+    width: 180px;   
+}
+.backHomeButton{
+    width: 200px;
+    margin: 100px 0px 20px 0px;
+}
+.loginContainer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.login{
+    margin: 0px 0px;
+    max-width: 350px;
+    width: 90%;
+    height: 260px;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.loginLogo{
+    max-width: 70%;
+    margin: 30px 0px 0px 0px;
+    padding: 0px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    border-radius: 10px;
+    text-align: center;
+    background: #f542a1;
+}
+.loginHeader{
+    margin: 10px 0px 0px 0px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+.loginTitle{
+    text-align: center;
+}
+.loginButton{
+    width: 180px;
+}
+.chatButton{
+    width: 15px;
+    height: 15px;
+    padding: 20px;
+    position: fixed;
+    right: 10px;
+    bottom: 50px;
+    background: #fa39c7;
+    border: 5px solid #ff66d6;
+    border-radius: 50%;
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+.chatButton:active{
+    filter: brightness(1.2);
+}
+.chatIcon{
+    margin: 0px 0px 0px 0px;
+    font-size: 26px;
+    font-variation-settings:
+        "FILL" 1,
+        "wght" 400,
+        "GRAD" 0,
+        "opsz" 24
+    ;
+}
+.chatBox{
+    visibility: hidden;
+    position: fixed;
+    right: 20px;
+    bottom: 60px;
+    width: 300px;
+    max-width: 90%;
+    height: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.3);
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    z-index: 6;
+}
+.chatBoxHeader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+.chatBoxTitle{
+    margin: 0px 0px 0px 20px;
+}
+.chatCloseButton{
+    margin: 0px 15px 0px auto;
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    background: #ff66d6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.3);
+}
+.chatCloseButton:active{
+    filter: brightness(1.2);
+}
+.chatCloseIcon{
+    margin: 0px 0px 0px 0px;
+    font-size: 22px;
+    font-variation-settings:
+        "FILL" 1,
+        "wght" 400,
+        "GRAD" 0,
+        "opsz" 24
+    ;
+}
+.chatMessageContainer{
+    margin: 0px 0px 15px 0px;
+    align-self: center;
+    width: 250px;
+    max-width: 90%;
+    height: 260px;
+    border-radius: 10px;
+    box-shadow: inset 0 2px 8px 0 rgba(0, 0, 0, 0.3);
+    background: #fcfcfc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.chatMessageOverflow{
+    width: 90%;
+    height: 90%;
+    max-width: 90%;
+    max-height: 90%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+.chatMessage{
+    align-self: flex-start;
+    width: 70%;
+    max-width: 70%;
+    margin: 0px 0px 10px 0px;
+    padding: 15px;
+    border-radius: 5px;
+    color: #fff;
+    background: #f542a1;
+    user-select: none;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.3);
+    word-break: break-word;
+    word-wrap: break-word;
+}
+.chatMessageSelf{
+    background: #ff66d6;
+    align-self: flex-end;
+}
+.chatMessageHeader{
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0px 0px 5px 0px;
+}
+.chatMessageBody{
+    font-size: 12px;
+    font-weight: 500;
+}
+.chatMessageInputContainer{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+.chatMessageInput{
+    margin: 0px 0px 15px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #888;
+    width: 150px;
+    outline: none;
+    padding: 5px;
+    text-align: center;
+    border: 5px solid #ff96ce;
+    border-radius: 10px;
+    flex: auto;
+}
+.chatMessageInput:focus{
+    outline: 4px solid #fa39c7;
+}
+.chatMessageSendButton{
+    width: 10px;
+    height: 10px;
+    color: #fff;
+    margin: 0px 15px 0px 7px;
+    padding: 10px;
+    border: 5px solid #f542a1;
+    border-radius: 10px;
+    background: #ff57b0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    font-size: 12px;
+    font-weight: bold;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.3); 
+}
+.chatMessageSendButton:active{
+    filter: brightness(1.2);
+}
+.cameraScanButton{
+    margin: -3px 0px 0px 0px;
+}
+.cameraControlButton{
+    margin: -3px 10px 0px 10px;
+}
+.photoClickerButtons{
+    margin: -5px 0px 0px 0px;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 3px #fff;
+    border-radius: 10px;
+    background: #ddd;
+}
+::-webkit-scrollbar-thumb{
+    box-shadow: inset 0 0 3px #fff;
+    background: #f472d0;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: #e356bc;
+}
