@@ -2,7 +2,7 @@
 
 ## A face recognition based attendance system made using React, Firebase and FaceAPI.
 
-### Live @ https://projectmanager.pages.dev/
+### Live @ https://facelogix.pages.dev/
 
 ### Run Locally
 
